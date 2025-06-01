@@ -1,9 +1,135 @@
+/* Fonte global e espaço pro menu fixo */
+html {
+  scroll-behavior: smooth;
+}
 body {
-    background-color: #f5f5f5;
-    font-family: Arial, sans-serif;
-    color: #333;
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  padding-top: 90px;
 }
 
-h1 {
-    color: #007BFF;
+/* Header fixo */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #7B1E3C;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
 }
+.logo img {
+  height: 60px;
+}
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+.menu a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+.menu a:hover {
+  color: #FFD700;
+}
+
+/* Seção quem somos */
+.sobre {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 60px 30px;
+  background-color: #fff0f4;
+}
+.sobre .texto {
+  flex: 1;
+  padding: 20px;
+}
+.sobre .texto h2 {
+  font-size: 32px;
+  color: #7B1E3C;
+  margin-bottom: 10px;
+}
+.sobre .texto p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+}
+.sobre .imagem {
+  flex: 1;
+  padding: 20px;
+}
+.sobre .imagem img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Galeria de fotos */
+.galeria {
+  padding: 60px 30px;
+  background-color: #fff;
+  text-align: center;
+}
+.galeria h2 {
+  font-size: 32px;
+  color: #7B1E3C;
+  margin-bottom: 40px;
+}
+.grade-fotos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.grade-fotos img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Localização */
+.localizacao {
+  padding: 60px 30px;
+  background-color: #fff0f0;
+  text-align: center;
+}
+.localizacao h2 {
+  font-size: 32px;
+  color: #7B1E3C;
+  margin-bottom: 20px;
+}
+.localizacao p {
+  font-size: 18px;
+  color: #444;
+  margin-bottom: 30px;
+}
+.mapa iframe {
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Contato */
+.contato {
+  background-color: #fff;
+  padding: 60px 30px;
+  text-align: center;
+}
+.contato h2 {
+  font-size: 32px;
+  color: #7B1E3C;
+  margin-bottom: 20px;
+}
+.contato p {
+  font-size: 18px;
+  color: #

@@ -1,13 +1,89 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>Restaurante Diniz</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cantinho Caseiro</title>
+
+  <!-- Fonte do Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Estilo CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Bem-vindo ao Restaurante Diniz</h1>
-    <p>Comida caseira, ambiente acolhedor e sabor sem igual.</p>
-    <img src="{{ url_for('static', filename='imagem.jpg') }}" alt="Foto do restaurante" />
+  <!-- TOPO DO SITE -->
+  <header class="header">
+    <div class="logo">
+      <img src="{{ url_for('static', filename='logorestaurante_ajustada.jpeg') }}" alt="Logo Cantinho Caseiro">
+    </div>
+    <nav class="menu">
+      <ul>
+        <li><a href="#quem-somos">Quem somos</a></li>
+        <li><a href="#fotos">Fotos</a></li>
+        <li><a href="#localizacao">Localização</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- QUEM SOMOS -->
+  <section id="quem-somos" class="sobre">
+    <div class="texto">
+      <h2>Quem somos</h2>
+      <p>
+        No Cantinho Caseiro, cada prato é feito com carinho, como nas melhores refeições em família.
+        Acreditamos que comida de verdade tem sabor de aconchego, simplicidade e alegria.
+      </p>
+    </div>
+    <div class="imagem">
+      <img src="{{ url_for('static', filename='comida.jpg') }}" alt="Comida caseira">
+    </div>
+  </section>
+
+  <!-- GALERIA DE FOTOS -->
+  <section id="fotos" class="galeria">
+    <h2>Nossas fotos</h2>
+    <div class="grade-fotos">
+      <img src="{{ url_for('static', filename='foto1.jpg') }}" alt="Foto 1">
+      <img src="{{ url_for('static', filename='foto2.jpg') }}" alt="Foto 2">
+      <img src="{{ url_for('static', filename='foto3.jpg') }}" alt="Foto 3">
+    </div>
+  </section>
+
+  <!-- LOCALIZAÇÃO -->
+  <section id="localizacao" class="localizacao">
+    <h2>Localização</h2>
+    <p>Estamos em Bela Vista de Goiás, com um espaço acolhedor no coração da cidade. Venha nos visitar!</p>
+    <div class="mapa">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3947.5563189445226!2d-49.295!3d-16.973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTbCsDU4JzIzLjAiUyA0OcKwMTcnNDIuMCJX!5e0!3m2!1spt-BR!2spt!4v0000000000000" 
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato" class="contato">
+    <h2>Contato</h2>
+    <p>Ficou com alguma dúvida ou quer reservar uma mesa? Fale com a gente!</p>
+    <div class="dados-contato">
+      <p>📞 (62) 99999-9999</p>
+      <p>📧 contato@cantinhocaseiro.com</p>
+      <p>📍 Rua Principal, nº 100 - Bela Vista de Goiás</p>
+    </div>
+    <form class="formulario">
+      <input type="text" placeholder="Seu nome" required>
+      <input type="email" placeholder="Seu e-mail" required>
+      <textarea placeholder="Sua mensagem..." required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer class="rodape">
+    <p>&copy; 2025 Cantinho Caseiro. Todos os direitos reservados.</p>
+  </footer>
 </body>
 </html>
